@@ -85,8 +85,10 @@ class MusicLibraryController
     def play_song
         puts "Which song number would you like to play?"
         number = gets.strip
-        song = self.list_songs[number.to_i -1]
-        puts "Playing #{song.name} by #{song.artist.name}"
+        if 1 < number < 100
+            song = self.list_songs[number.to_i -1]
+            puts "Playing #{song.name} by #{song.artist.name}"
+        end 
     end
 
 end
