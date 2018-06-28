@@ -89,6 +89,7 @@ class MusicLibraryController
             song = self.list_songs[number.to_i -1]
             puts "Playing #{song.name} by #{song.artist.name}"
         end
+        else nil
     end
 
 end
