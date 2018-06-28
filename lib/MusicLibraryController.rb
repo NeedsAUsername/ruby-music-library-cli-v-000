@@ -33,7 +33,7 @@ class MusicLibraryController
                 self.list_songs_by_genre
             elsif input == "play song"
                 self.play_song
-            end 
+            end
         end
     end
 
@@ -85,8 +85,8 @@ class MusicLibraryController
     def play_song
         puts "Which song number would you like to play?"
         number = gets.strip
-
-
+        song = self.list_songs[number]
+        puts "Playing #{song.name} by #{song.artist.name}"
     end
 
 end
